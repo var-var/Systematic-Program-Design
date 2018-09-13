@@ -9,11 +9,10 @@
 (define TEXT-COLOR "orange")
 (define SEPARATOR (text ", " TEXT-SIZE TEXT-COLOR))
 
-
 ;; Function:
 
 ;; Number -> Image
-;; Produce image of numbers from Entered Number to 0
+;; Produce image of numbers from n to 0.
 (check-expect (string-n-times 0) (beside (text "0" TEXT-SIZE TEXT-COLOR)                                         
                                          (text "." TEXT-SIZE TEXT-COLOR)))
 (check-expect (string-n-times 1) (beside (text "1" TEXT-SIZE TEXT-COLOR)
@@ -25,8 +24,6 @@
               
 ;(define (string-n-times n) (beside (text "0" TEXT-SIZE TEXT-COLOR)
 ;                                  (square 0 "solid" "white")))      ;stub
-
-
 
 (define (string-n-times n)
   (cond [(zero? n) (beside (text "0" TEXT-SIZE TEXT-COLOR)                           
